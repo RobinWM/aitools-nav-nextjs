@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { SquareArrowOutUpRight } from 'lucide-react';
 
-import { WebNavigationListRow } from '@/lib/data';
+import { NavItemType } from '@/lib/data';
 
 import BaseImage from '../image/BaseImage';
 
-export default function WebNavCard({ name, thumbnailUrl, title, url, content }: WebNavigationListRow) {
+export default function WebNavCard({ name, thumbnailUrl, title, url, content }: NavItemType) {
   return (
     <div className='flex flex-col gap-3 rounded-[12px] bg-[#2C2D36] p-2 lg:p-5'>
       <Link href={`/ai/${name}`} title={title}>
