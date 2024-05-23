@@ -6,16 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --cache",
-    "lint:fix": "eslint --fix .",
-    "prettier": "prettier --write .",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --quiet --fix",
-      "prettier --write"
-    ]
+    "lint": "next lint"
   },
   "engines": {
     "node": ">=20.0.0",
