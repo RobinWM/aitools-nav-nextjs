@@ -1,4 +1,5 @@
-import { dataList, detailList, WebNavigationDetailData, WebNavigationListRow } from '@/lib/data';
+import { NavItemType } from '@/lib/data';
+import createClient from '@/db/supabase/client';
 
 /* eslint-disable @typescript-eslint/indent */
 export type ResponseBase<T> = {
@@ -25,19 +26,32 @@ export type WebNavigationListRequest = {
 
 export async function getWebNavigationList({ pageNum, pageSize }: WebNavigationListRequest) {
   console.log({ pageNum, pageSize });
-  const res = { code: 200, msg: 'success', rows: dataList, total: dataList.length } satisfies ResponseRows<
-    WebNavigationListRow[]
+  const supabase = createClient(); 
+  
+  let { data, error } = await supabase
+  .from('all_list')
+  .select('*')
+  .range(pageNum, pageSize);
+
+  const res = { code: 200, msg: 'success', rows: data, total: data.length } satisfies ResponseRows<
+    NavItemType[]
   >;
 
   return res;
 }
 
 export async function getWebNavigationDetail(name: string) {
+  const supabase = createClient(); 
+
+  let { data: detailList, error } = await supabase
+  .from('all_list')
+  .select('*');
+
   const res = {
     code: 200,
     msg: 'success',
-    data: detailList.find((item) => item.name === name) as WebNavigationDetailData,
-  } satisfies ResponseData<WebNavigationDetailData>;
+    data: detailList.find((item:NavItemType) => item.name === name) as NavItemType,
+  } satisfies ResponseData<NavItemType>;
 
   return res;
 }
