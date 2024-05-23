@@ -10,12 +10,12 @@ export default function WebNavCard({ name, thumbnailUrl, title, url, content }: 
     <div className='flex flex-col gap-3 rounded-[12px] bg-[#2C2D36] p-2 lg:p-5'>
       <Link href={`/ai/${name}`} title={title}>
         <BaseImage
-          width={278}
-          height={156}
+          width={400}
+          height={255}
           src={thumbnailUrl || ''}
           alt={title}
           title={title}
-          className='aspect-[278/156] rounded-[8px] bg-white/40 hover:opacity-70'
+          className='rounded-[8px] bg-white/40 hover:opacity-70'
         />
       </Link>
       <div className='flex items-center justify-between'>
