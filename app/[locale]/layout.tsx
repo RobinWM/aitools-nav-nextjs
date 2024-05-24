@@ -22,8 +22,8 @@ export default function RootLayout({
   const messages = useMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning className='dark'>
-      <body className='relative mx-auto flex min-h-screen flex-col bg-tap4-black text-white'>
+    <html lang={locale} suppressHydrationWarning>
+      <body className='relative mx-auto flex min-h-screen flex-col text-black'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Toaster
             position='top-center'

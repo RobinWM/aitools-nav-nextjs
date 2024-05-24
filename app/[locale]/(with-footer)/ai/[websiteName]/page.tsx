@@ -63,15 +63,15 @@ export default async function Page({ params: { websiteName } }: { params: { webs
             src={data.thumbnailUrl || ''}
             className='absolute mt-3 aspect-[466/234] w-full rounded-[16px] border border-[#424242] bg-[#424242] bg-cover lg:mt-0'
           />
-          <div className='absolute inset-0 z-10 hidden items-center justify-center gap-1 rounded-[16px] bg-black bg-opacity-50 text-2xl text-white transition-all duration-200 group-hover:flex'>
+          <div className='absolute inset-0 z-10 hidden items-center justify-center gap-1 rounded-[16px] bg-black bg-opacity-50 text-2xl text-black transition-all duration-200 group-hover:flex'>
             {t('visitWebsite')} <CircleArrowRight className='size-5' />
           </div>
         </a>
       </div>
       <Separator className='bg-[#010101]' />
       <div className='mb-5 px-3 lg:px-0'>
-        <h2 className='my-5 text-2xl text-white/40 lg:my-10'>{t('introduction')}</h2>
-        <MarkdownProse markdown={data?.detail || ''} />
+        <h2 className='my-5 text-2xl text-black lg:my-10'>{t('introduction')}</h2>
+        <MarkdownProse markdown={data?.detail || ''} className='text-black'/>
       </div>
     </div>
   );

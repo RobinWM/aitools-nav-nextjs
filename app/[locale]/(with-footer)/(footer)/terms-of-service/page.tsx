@@ -23,7 +23,7 @@ export default function Page() {
       <ul>
         <li>
           {t('4-p')}{' '}
-          <Link href='/terms-of-service' className='font-bold text-white hover:text-white'>
+          <Link href='/terms-of-service' className='font-bold text-black hover:text-black'>
             {t('terms-of-service')}
           </Link>
         </li>

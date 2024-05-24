@@ -19,7 +19,7 @@ const config = {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
+        background: 'var(--background)',
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
@@ -77,6 +77,14 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'caret-blink': 'caret-blink 1.25s ease-out infinite',
       },
+      typography: () => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-invert-bold': 'black',
+            '--tw-prose-invert-headings': 'black',
+          },
+        },
+      }),
     },
   },
   // eslint-disable-next-line import/no-extraneous-dependencies, global-require

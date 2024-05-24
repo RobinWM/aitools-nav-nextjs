@@ -18,7 +18,7 @@ function NavDrawerItem({ isActive, name }: { isActive: boolean; name: string }) 
       )}
     >
       <div className={cn('size-3 rounded-full bg-[#15141A]', isActive && 'bg-white')} />
-      <div className={cn('text-sm text-white/40', isActive && 'text-white')}>{name}</div>
+      <div className={cn('text-sm text-black/40', isActive && 'text-black')}>{name}</div>
     </li>
   );
 }
