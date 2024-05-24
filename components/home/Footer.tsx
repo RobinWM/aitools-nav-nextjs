@@ -23,7 +23,7 @@ function InfoLink({
 }
 
 const tap4ai = {
-  title: 'Tap4 AI',
+  title: 'AI',
   href: 'https://www.tap4.ai',
 };
 
