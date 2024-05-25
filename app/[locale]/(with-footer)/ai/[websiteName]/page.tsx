@@ -71,7 +71,7 @@ export default async function Page({ params: { websiteName } }: { params: { webs
       <Separator className='bg-[#010101]' />
       <div className='mb-5 px-3 lg:px-0'>
         <h2 className='my-5 text-2xl text-black lg:my-10'>{t('introduction')}</h2>
-        <MarkdownProse markdown={data?.detail || ''} className='text-black'/>
+        <MarkdownProse markdown={data?.detail || ''} className='text-black' />
       </div>
     </div>
   );

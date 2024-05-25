@@ -78,7 +78,7 @@ export default function SubmitForm({ className }: { className?: string }) {
                     className='input-border-pink h-[42px] w-full rounded-[8px] border-[0.5px] p-5'
                     {...field}
                   />
-                  </FormControl>
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
